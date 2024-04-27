@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+i{
+    cursor: pointer;
+}
+aside{
+    width: 350px;
+    height: 100vh;
+    min-height: 700px;
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    transform: translateX(-82%);
+    transition: all .5s;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+.side-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.side-head>h3{
+    font-size: 30px;
+}
+.side-head>i{
+    font-size: 30px;
+}
+.side-body>ul{
+list-style: none;
+}
+.side-body>ul>li>span{
+    transform: scaleX(0);
+    transform-origin: left;
+    word-wrap: normal;
+}
+.side-body>ul>li{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    height: 40px;
+}
+.side-body>ul>li>i:hover{
+filter: drop-shadow(2px 3px 5px white);
+}
+.hoverIcon{
+    transform: scaleX(1) !important;
+    position: absolute;
+    font-size: 10px;
+    background-color: rgb(76, 111, 239);
+    border-radius: 10px;
+    padding: 3px 5px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    transition: .5s;
+    left: 100%;
+    white-space: nowrap;
+}
+.d-none{
+    display: none;
+}
+.bg-color-aside{
+    background-color: rgb(20,20,150);
+}
+
+
+
+
+
+
+
+
+
+
+
+.blank{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.accordion{
+    margin-top: 150px;
+}
+
+.accordion>ul>li{
+    cursor: pointer;
+    background-color: red;
+    width: 380px;
+    height: 40px;
+    padding: 10px;
+    margin: 1%;
+    list-style: none;
+    font-weight: 900;
+}
+.accordion p{
+    overflow: hidden;
+    width: 380px;
+    height: 0px;
+}
+.rotate{
+    transform: rotate(90deg) !important;
+    color: blue;
+}
+
+.color{
+    color: blue;
+}
+
+
+
+
+
+
+.info{
+    display: inline-block;
+    width: 55%;
+    text-align: center;
+}
+.infoUp{
+    position: relative;
+    height: 150px;
+    padding-top: 30px;
+    width: 40%;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+.infop{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.infop1{
+    font-size: 50px;
+    opacity: 0.4;
+    color: rgb(101, 101, 255);
+}
+.infop2{
+    padding-top: 20px;
+    font-size: 25px;
+    color: rgba(1, 1, 187, 0.856);
+    font-weight: 800;
+}
+
+.lineout{
+    width: 45%;
+    margin: auto;
+}
+.infoDown li {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.fa-chevron-right{
+    margin-right: 15px;    
+}
+.linep{
+    font-size: 20px;
+}
+.lineprg{
+    margin-bottom: 20px;
+    height: 0px;
+    text-align: left;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+
+/* jsClasses */
+.rotate{
+    transform: rotate(90deg);
+    color: blue;
+}
+.color{
+    color: blue;
+}
+.height{
+    height: 100px;
+}

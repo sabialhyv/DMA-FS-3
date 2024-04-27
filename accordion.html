@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MilliSoft</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./accordion.css" />
+</head>
+
+<body>
+    <div class="blank">
+        <aside>
+            <div class="side-head">
+                <h3>MilliSoft</h3>
+                <i class="fa-solid fa-x" onclick="closeMenu()"></i>
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+            </div>
+            
+            <div class="side-body">
+                <ul>
+                    <li><span>ANA SƏHİFƏ</span> <i class="fa-solid fa-house-chimney"></i></li>
+                    <li><span>HAQQIMIZDA</span><i class="fa-solid fa-file-circle-question"></i></li>
+                    <li><span>XİDMƏTLƏR</span> <i class="fa-sharp fa-solid fa-gears"></i></li>
+                    <li><span>PORTFEL</span> <i class="fa-solid fa-image"></i></li>
+                    <li><span>KOMANDA</span> <i class="fa-solid fa-users"></i></li>
+                    <li><span>ƏLAQƏ</span> <i class="fa-solid fa-envelope"></i></li>
+                </ul>
+            </div>
+        </aside>
+
+
+
+
+
+        <div class="info">
+            <div class="infoUp">
+                <p class="infop infop1">Haqqımızda</p>
+                <p class="infop infop2">HAQQIMIZDA</p>
+            </div>
+
+            <div class="infoDown">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <span class="linep">Fəaliyyətimiz</span>
+                    </li>
+                    <p class="lineprg">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Aliquid, quasi enim ratione officia ea nihil dolores necessitatibus deserunt nisi esse
+                        quisquam magni voluptatem molestiae perferendis sint voluptas incidunt a corrupti?</p>
+                    <li>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <span class="linep">Əsas Məqsədimiz</span>
+                    </li>
+                    <p class="lineprg">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Aliquid, quasi enim ratione officia ea nihil dolores necessitatibus deserunt nisi esse
+                        quisquam magni voluptatem molestiae perferendis sint voluptas incidunt a corrupti?</p>
+                    <li>
+                        <i class="fa-solid fa-chevron-right"></i>
+                        <span class="linep">Əsas Hədəflərimiz</span>
+                    </li>
+                    <p class="lineprg">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                        Aliquid, quasi enim ratione officia ea nihil dolores necessitatibus deserunt nisi esse
+                        quisquam magni voluptatem molestiae perferendis sint voluptas incidunt a corrupti?</p>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let aside = document.querySelector("aside")
+        let menuIcon = document.querySelector(".fa-bars")
+        let icons = document.querySelectorAll(".side-body ul li")
+
+        function openMenu() {
+            aside.style.transform = "translateX(0%)"
+            menuIcon.classList.add("d-none")
+            aside.classList.add("bg-color-aside")
+            icons.forEach(x => {
+                x.children[1].classList.add("d-none")
+                x.children[0].style.transform = "scaleX(1)"
+            })
+        }
+
+        function closeMenu() {
+            aside.style.transform = "translateX(-82%)"
+            menuIcon.classList.remove("d-none")
+            aside.classList.remove("bg-color-aside")
+            icons.forEach(x => {
+                x.children[1].classList.remove("d-none")
+                x.children[0].style.transform = "scaleX(0)"
+            })
+        }
+
+        document.querySelectorAll(".side-body ul li i").forEach((element, index) => {
+            element.addEventListener("mouseover", function () {
+                element.previousElementSibling.classList.add("hoverIcon")
+            })
+            element.addEventListener("mouseleave", function () {
+                element.previousElementSibling.classList.remove("hoverIcon")
+            })
+        });
+
+
+
+
+
+        document.querySelectorAll(".infoDown li").forEach(item => {
+            item.addEventListener("click", function () {
+                document.querySelectorAll(".infoDown li").forEach(x => {
+                    if (this != x) {
+                        x.children[0].classList.remove("rotate")
+                        x.children[1].classList.remove("color")
+                        x.nextElementSibling.classList.remove("height")
+                    }
+                })
+                item.children[0].classList.toggle("rotate")
+                item.children[1].classList.toggle("color")
+                item.nextElementSibling.classList.toggle("height")
+            })
+        })
+        </script>
+
+</body>
+
+</html>
